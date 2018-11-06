@@ -46,7 +46,7 @@ public class box {
 	}
 	
 	public boolean getStatus() {
-		if(this.color.equals(color.BLACK)) {
+		if(this.color.equals(Color.BLACK)) {
 			return Boolean.FALSE;
 		} else {
 			return Boolean.TRUE;
