@@ -15,6 +15,7 @@ class test_of_myClass {
 		frame.setContentPane(panel);
 		frame.pack();
 		frame.setVisible(true);
+		System.out.println(button2.getStatus());
 	}
 }
 

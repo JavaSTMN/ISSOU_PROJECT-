@@ -7,6 +7,7 @@ public class box {
 	/*
 	 * This class is for make a box for layout
 	 * You can access variable color, button and you have function for get size.
+	 * getStatus() for status of box black or white 
 	 */
 	
 	private int height;
@@ -42,6 +43,15 @@ public class box {
 		} else {
 			setColor(Color.BLACK);
 		}
+	}
+	
+	public boolean getStatus() {
+		if(this.color.equals(color.BLACK)) {
+			return Boolean.FALSE;
+		} else {
+			return Boolean.TRUE;
+		}
+		
 	}
 	
 	private void setSizeBox() {
