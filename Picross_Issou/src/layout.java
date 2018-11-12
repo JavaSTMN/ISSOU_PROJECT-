@@ -3,13 +3,13 @@ import java.awt.*;
 import java.util.ArrayList;
 //import Box;
 
-public class layout extends Box {
+public class layout {
 	
-	public int height;
+	public int nbBtn;
 	public int width;
 	public int row; 
 	public int colum;
-	public ArrayList<Box> matrice;
+	//public ArrayList<Box> matrice;
 	public int nb_box;
 	/*
 	public layout(int row, int colum) {
@@ -22,7 +22,7 @@ public class layout extends Box {
 	}
 	*/
 	public void makeAllBox(int nb_box) {
-		this.matrice = new ArrayList<Box>();		
+		//this.matrice = new ArrayList<Box>();		
 	};
 	
 }
