@@ -6,10 +6,10 @@ class test_of_myClass {
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("test");
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		JPanel panel = new JPanel(new GridLayout(4,4,4,4));	
-		Box button1 = new Box(10,10);
+		JPanel panel = new JPanel(new GridBagLayout());	
+		Box button1 = new Box(0,0);
 		button1.changeColor();
-		Box button2 = new Box(10,10);
+		Box button2 = new Box(1,1);
 		panel.add(button1.getButton());	
 		panel.add(button2.getButton());
 		frame.setContentPane(panel);

@@ -16,12 +16,16 @@ public class Box implements ActionListener {
 	private int width;
 	public JButton button;
 	public Color color;
+	public int row;
+	public int colum;
 
-	public Box(int height, int width) {
+	public Box(int row,int colum) {
 		JButton new_button = new JButton();
 		this.button = new_button;
-		this.height = height;
-		this.width = width;
+		this.height = 20;
+		this.width = 20;
+		this.row = row;
+		this.colum = colum;
 		setColor(Color.WHITE);
 		setSizeBox();	
 		this.button.addActionListener(this);
@@ -30,15 +34,15 @@ public class Box implements ActionListener {
 	public JButton getButton() {
 		return this.button;
 	}	
-	
-	public int getHeight() {
-		return this.height;
-	}
-	
-	public int getWidth() {
-		return this.width;
-	}
 
+	public int getRow() {
+		return this.row;
+	}
+	
+	public int getColum() {
+		return this.colum;
+	}
+	
 	public void changeColor() {
 		if(this.color.equals(Color.BLACK)) {
 			setColor(Color.WHITE);
@@ -56,6 +60,10 @@ public class Box implements ActionListener {
 		
 	}
 	
+    public void actionPerformed(ActionEvent e) {
+        changeColor();
+    }
+    
 	private void setSizeBox() {
 	    this.button.setPreferredSize(new Dimension(this.height, this.width));
 	}
@@ -65,9 +73,4 @@ public class Box implements ActionListener {
 		this.button.setForeground(this.color);
 		this.button.setBackground(this.color);
 	}
-	
-    public void actionPerformed(ActionEvent e) {
-        changeColor();
-    }
-	
 }
