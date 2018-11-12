@@ -2,7 +2,7 @@ import java.awt.Dimension;
 import javax.swing.*;
 import java.awt.Color;
 
-public class box {
+public class Box {
 	
 	/*
 	 * This class is for make a box for layout
@@ -15,7 +15,7 @@ public class box {
 	public JButton button;
 	public Color color;
 
-	public box(int height, int width) {
+	public Box(int height, int width) {
 		JButton new_button = new JButton();
 		this.button = new_button;
 		this.height = height;

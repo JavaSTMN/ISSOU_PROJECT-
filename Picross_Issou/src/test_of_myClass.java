@@ -7,9 +7,9 @@ class test_of_myClass {
 		JFrame frame = new JFrame("test");
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		JPanel panel = new JPanel(new GridLayout(4,4,4,4));	
-		box button1 = new box(40,40);
+		Box button1 = new Box(10,10);
 		button1.change_color();
-		box button2 = new box(40,40);
+		Box button2 = new Box(10,10);
 		panel.add(button1.getButton());	
 		panel.add(button2.getButton());
 		frame.setContentPane(panel);
