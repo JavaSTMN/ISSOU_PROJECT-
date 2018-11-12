@@ -1,8 +1,10 @@
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 import java.awt.Color;
 
-public class Box {
+public class Box implements ActionListener {
 	
 	/*
 	 * This class is for make a box for layout
@@ -20,9 +22,9 @@ public class Box {
 		this.button = new_button;
 		this.height = height;
 		this.width = width;
-		this.color = Color.WHITE;
-		this.button.setForeground(color);
+		setColor(Color.WHITE);
 		setSizeBox();	
+		this.button.addActionListener(this);
 	}
 	
 	public JButton getButton() {
@@ -37,7 +39,7 @@ public class Box {
 		return this.width;
 	}
 
-	public void change_color() {
+	public void changeColor() {
 		if(this.color.equals(Color.BLACK)) {
 			setColor(Color.WHITE);
 		} else {
@@ -63,5 +65,9 @@ public class Box {
 		this.button.setForeground(this.color);
 		this.button.setBackground(this.color);
 	}
+	
+    public void actionPerformed(ActionEvent e) {
+        changeColor();
+    }
 	
 }

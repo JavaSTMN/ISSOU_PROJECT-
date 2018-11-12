@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.ArrayList;
 //import Box;
 
-public class layout extends Box {
+public class layout {
 	
 	public int height;
 	public int width;
@@ -11,6 +11,7 @@ public class layout extends Box {
 	public int colum;
 	public ArrayList<Box> matrice;
 	public int nb_box;
+	public 
 	/*
 	public layout(int row, int colum) {
 		this.height = 10;
