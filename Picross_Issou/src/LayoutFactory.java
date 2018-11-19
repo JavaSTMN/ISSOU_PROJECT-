@@ -8,12 +8,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
-import Layout.java;
+
 //import java.util.Iterator;
 
 
 
-public  class LectureJson {
+public  class LayoutFactory {
 	
 	static ArrayList<ArrayList<Integer>> tabVerifRow;
 	static ArrayList<ArrayList<Integer>> tabVerifCol;
@@ -22,7 +22,7 @@ public  class LectureJson {
 	public static void main(String[] args) {
 		 
 
-		  
+
 	   
 	}
 	
@@ -73,6 +73,10 @@ public  class LectureJson {
            	
            	tabVerifCol.add(tempRow);
            }
+           
+           return new Layout(tabVerifRow,tabVerifCol) ;
+           
+		 
 	}
 	
 	
