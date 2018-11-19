@@ -32,23 +32,25 @@ public class Layout {
 		
 		this.nbLine = lineSpec.length;
 		this.nbColum = colSpec.length;
+		System.out.println(this.nbLine);
+		System.out.println(this.nbColum);
 
 		JFrame.setDefaultLookAndFeelDecorated(true);
-		this.frame = new JFrame("Layout Test");
+		this.frame = new JFrame("Picross");
 		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.panel = new JPanel(new GridBagLayout());
 
 		this.matrice = new Box[this.nbLine][this.nbColum];
 		GridBagConstraints c = new GridBagConstraints();
-		for (int line = 0; line < this.nbLine; line++) {
-			for (int col = 0; col <  this.nbColum; col++) {
-				
-			}
-		}
-		for (int line = 1; line <= this.nbLine; line++) {
-			for (int col = 1; col <= this.nbColum; col++) {
-				c.gridx = col;
-				c.gridy = line;
+//		for (int line = 0; line < this.nbLine; line++) {
+//			for (int col = 0; col <  this.nbColum; col++) {
+//				
+//			}
+//		}
+		for (int line = 0; line < this.nbLine ; line++) {
+			for (int col = 0; col < this.nbColum ; col++) {
+				c.gridx = col +1;
+				c.gridy = line+1;
 				this.matrice[line][col] = new Box(line, col);
 				this.panel.add(this.matrice[line][col].getButton(),c);
 
