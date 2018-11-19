@@ -15,9 +15,10 @@ import java.awt.*;
 			frame.pack();
 			frame.setVisible(true);
 			System.out.println(button2.getStatus());
+			
+			
 			// test layout 
 			int colSpec[][] = { { 1, 2 }, { 3 }, { 4, 1, 2 } };
-
 			int lineSpec[][] = { { 1, 2 }, { 2, 3 } };
 
 			Layout picross = new Layout(lineSpec, colSpec);
