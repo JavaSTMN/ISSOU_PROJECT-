@@ -2,6 +2,8 @@ import java.awt.Dimension;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
 import javax.swing.*;
 import java.awt.Color;
 
@@ -86,8 +88,8 @@ public class Box implements ActionListener,IObservable {
 	}
 	
 	public void notifyObservable() {
-		for(Layout l:this.Observer) {
-			l.update(this);
+		for(IObserver l:this.Observer) {
+			IObserver.update(this);
 		}
 	}
 	public void addObserver(IObserver observer) {

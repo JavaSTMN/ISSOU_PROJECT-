@@ -18,10 +18,11 @@ import java.awt.*;
 			
 			
 			// test layout 
-			int colSpec[][] = { { 1, 2 }, { 3 }, { 4, 1, 2 } };
-			int lineSpec[][] = { { 1, 2 }, { 2, 3 } };
+			//int colSpec[][] = { { 1, 2 }, { 3 }, { 4, 1, 2 } };
+			//int lineSpec[][] = { { 1, 2 }, { 2, 3 } };
 
-			Layout picross = new Layout(lineSpec, colSpec);
+			//Layout picross = new Layout(lineSpec, colSpec);
+			
 			
 		}
 	}

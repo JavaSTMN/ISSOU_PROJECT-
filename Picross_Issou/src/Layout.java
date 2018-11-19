@@ -13,7 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class Layout implements IObserver {
-	static JFrame frame;
+	
 	private JPanel panel;
 
 	public int nbLine;
@@ -36,8 +36,7 @@ public class Layout implements IObserver {
 		System.out.println(this.nbColum);
 
 		JFrame.setDefaultLookAndFeelDecorated(true);
-		this.frame = new JFrame("Picross");
-		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		this.panel = new JPanel(new GridBagLayout());
 
 		this.matrice = new Box[this.nbLine][this.nbColum];
@@ -56,10 +55,7 @@ public class Layout implements IObserver {
 
 			}
 		}
-		this.frame.setContentPane(panel);
-		this.frame.pack();
-
-		this.frame.setVisible(true);
+	
 	}
 
 	public void update(Box b) {
@@ -76,5 +72,9 @@ public class Layout implements IObserver {
 	private boolean verifCol(int Col) {
 
 		return true;
+	}
+	
+	public JPanel getPanel() {
+		return this.panel;
 	}
 }
