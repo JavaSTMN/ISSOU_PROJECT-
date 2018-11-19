@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import java.awt.Color;
 
-public class Box implements ActionListener {
+public class Box implements ActionListener,IObservable {
 	
 	/*
 	 * This class is for make a box for layout
@@ -21,7 +21,8 @@ public class Box implements ActionListener {
 	public Color color;
 	public int line;
 	public int colum;
-
+	public ArrayList<IObserver> Observer;
+	
 	public Box(int line,int colum) {
 		this.button = new JButton();
 		this.height = 20;
@@ -58,7 +59,7 @@ public class Box implements ActionListener {
 	}
 	
     public void actionPerformed(ActionEvent e) {
-    	this.comptEtat = this.comptEtat +1;
+    	this.comptEtat = this.comptEtat+1;
     	if(this.comptEtat == 0 ) {
     	this.button.setText("");
     	setColor(Color.WHITE);
@@ -71,6 +72,7 @@ public class Box implements ActionListener {
     	setColor(Color.WHITE);
     	this.button.setForeground(Color.RED);
     	}
+    	notify();
     }
     
 	private void setSizeBox() {
@@ -81,5 +83,14 @@ public class Box implements ActionListener {
 		this.color = Color;
 		this.button.setForeground(this.color);
 		this.button.setBackground(this.color);
+	}
+	
+	public void notifyObservable() {
+		for(Layout l:this.Observer) {
+			l.update(this);
+		}
+	}
+	public void addObserver(IObserver observer) {
+		this.Observer.add(observer);
 	}
 }
