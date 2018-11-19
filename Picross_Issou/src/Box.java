@@ -16,15 +16,15 @@ public class Box implements ActionListener {
 	private int width;
 	public JButton button;
 	public Color color;
-	public int row;
+	public int line;
 	public int colum;
 
-	public Box(int row,int colum) {
+	public Box(int line,int colum) {
 		JButton new_button = new JButton();
 		this.button = new_button;
 		this.height = 20;
 		this.width = 20;
-		this.row = row;
+		this.line = line;
 		this.colum = colum;
 		setColor(Color.WHITE);
 		setSizeBox();	
@@ -35,8 +35,8 @@ public class Box implements ActionListener {
 		return this.button;
 	}	
 
-	public int getRow() {
-		return this.row;
+	public int getLine() {
+		return this.line;
 	}
 	
 	public int getColum() {
