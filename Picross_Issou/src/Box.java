@@ -1,8 +1,11 @@
 import java.awt.Dimension;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 import java.awt.Color;
 
-public class Box {
+public class Box implements ActionListener {
 	
 	/*
 	 * This class is for make a box for layout
@@ -12,48 +15,64 @@ public class Box {
 	
 	private int height;
 	private int width;
+	private int comptEtat;
+	private Insets f;
 	public JButton button;
 	public Color color;
+	public int line;
+	public int colum;
 
-	public Box(int height, int width) {
-		JButton new_button = new JButton();
-		this.button = new_button;
-		this.height = height;
-		this.width = width;
-		this.color = Color.WHITE;
-		this.button.setForeground(color);
+	public Box(int line,int colum) {
+		this.button = new JButton();
+		this.height = 20;
+		this.width = 20;
+		this.line = line;
+		this.colum = colum;
+		this.f = new Insets(0,0,0,0);
+		this.button.setMargin(f);
+		setColor(Color.WHITE);
 		setSizeBox();	
+		this.comptEtat=0;
+		this.button.addActionListener(this);
 	}
 	
 	public JButton getButton() {
 		return this.button;
 	}	
-	
-	public int getHeight() {
-		return this.height;
-	}
-	
-	public int getWidth() {
-		return this.width;
-	}
 
-	public void change_color() {
-		if(this.color.equals(Color.BLACK)) {
-			setColor(Color.WHITE);
-		} else {
-			setColor(Color.BLACK);
-		}
+	public int getLine() {
+		return this.line;
+	}
+	
+	public int getColum() {
+		return this.colum;
 	}
 	
 	public boolean getStatus() {
 		if(this.color.equals(Color.BLACK)) {
-			return Boolean.FALSE;
-		} else {
 			return Boolean.TRUE;
+		} else {
+			return Boolean.FALSE;
 		}
 		
 	}
 	
+    public void actionPerformed(ActionEvent e) {
+    	this.comptEtat = this.comptEtat +1;
+    	if(this.comptEtat == 0 ) {
+    	this.button.setText("");
+    	setColor(Color.WHITE);
+    	} else if(this.comptEtat == 1) { 		
+    	this.button.setText("");
+    	setColor(Color.BLACK);
+    	} else {
+    	this.comptEtat = -1;
+    	this.button.setText("X");
+    	setColor(Color.WHITE);
+    	this.button.setForeground(Color.RED);
+    	}
+    }
+    
 	private void setSizeBox() {
 	    this.button.setPreferredSize(new Dimension(this.height, this.width));
 	}
@@ -63,5 +82,4 @@ public class Box {
 		this.button.setForeground(this.color);
 		this.button.setBackground(this.color);
 	}
-	
 }
