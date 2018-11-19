@@ -3,6 +3,7 @@ import java.awt.*;
 
 	class test_of_myClass {
 		public static void main(String[] args) {
+			//test Box 
 			JFrame frame = new JFrame("test");
 			frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 			JPanel panel = new JPanel(new GridBagLayout());	
@@ -14,6 +15,13 @@ import java.awt.*;
 			frame.pack();
 			frame.setVisible(true);
 			System.out.println(button2.getStatus());
+			// test layout 
+			int colSpec[][] = { { 1, 2 }, { 3 }, { 4, 1, 2 } };
+
+			int lineSpec[][] = { { 1, 2 }, { 2, 3 } };
+
+			Layout picross = new Layout(lineSpec, colSpec);
+			
 		}
 	}
 
