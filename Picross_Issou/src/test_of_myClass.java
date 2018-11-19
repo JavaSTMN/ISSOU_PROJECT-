@@ -7,7 +7,6 @@ import java.awt.*;
 			frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 			JPanel panel = new JPanel(new GridBagLayout());	
 			Box button1 = new Box(0,0);
-			button1.changeColor();
 			Box button2 = new Box(1,1);
 			panel.add(button1.getButton());	
 			panel.add(button2.getButton());
@@ -17,5 +16,4 @@ import java.awt.*;
 			System.out.println(button2.getStatus());
 		}
 	}
-
 
