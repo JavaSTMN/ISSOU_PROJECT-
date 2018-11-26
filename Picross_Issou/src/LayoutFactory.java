@@ -2,13 +2,11 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -74,13 +72,6 @@ public class LayoutFactory {
 
 			tabVerifCol.add(tempRow);
 		}
-		LabelPicross condVert = new LabelPicross(false,tabVerifRow);
-		JPanel condVert2 = condVert.getPanel();
-		LabelPicross condHorz = new LabelPicross(true,tabVerifCol);
-		JPanel condHorz2 = condVert.getPanel();
-		//public LabelPicross(boolean orientation, ArrayList<ArrayList<Integer>> listCond)
-		return new Layout(tabVerifRow, tabVerifCol,condVert,condHorz);
-
+		return new Layout(tabVerifRow, tabVerifCol);
 	}
-
 }
