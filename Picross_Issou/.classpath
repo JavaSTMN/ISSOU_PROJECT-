@@ -7,6 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry exported="true" kind="lib" path="D:/Papier travail ecole/projet ecole/picross/ISSOU_PROJECT-/Picross_Issou/lib/json-simple-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/java/ISSOU_PROJECT-/Picross_Issou/lib/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
