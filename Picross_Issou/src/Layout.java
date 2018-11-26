@@ -5,7 +5,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.Component;
@@ -89,14 +88,14 @@ public class Layout implements IObserver  {
 		ArrayList<Integer> tabTemp = new ArrayList<Integer>();
 		for (int i = 0 ; i<this.nbLine-1; i++) {
 			if(this.matrice[line][i].getStatus() == true) {
+				result = 1;
 				for (int j = i; j<this.nbColum-i-1; j++) {
-					if(this.matrice[line][j+1].getStatus() == true) {
-						result ++;
-					}
+						if(this.matrice[line][j+1].getStatus() == true) {
+							result ++;
+						}
 				}
 				tabTemp.add(result);
 			}
-			
 		}
 		System.out.println(tabTemp);
 		return true;
