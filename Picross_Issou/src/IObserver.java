@@ -1,6 +1,4 @@
 
 public interface IObserver {
-	static void update(IObservable observable){
-	
-	}
+	public void update(IObservable observable);
 }
