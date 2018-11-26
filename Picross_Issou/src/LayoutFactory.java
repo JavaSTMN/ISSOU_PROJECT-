@@ -74,8 +74,12 @@ public class LayoutFactory {
 
 			tabVerifCol.add(tempRow);
 		}
-
-		return new Layout(tabVerifRow, tabVerifCol);
+		LabelPicross condVert = new LabelPicross(false,tabVerifRow);
+		JPanel condVert2 = condVert.getPanel();
+		LabelPicross condHorz = new LabelPicross(true,tabVerifCol);
+		JPanel condHorz2 = condVert.getPanel();
+		//public LabelPicross(boolean orientation, ArrayList<ArrayList<Integer>> listCond)
+		return new Layout(tabVerifRow, tabVerifCol,condVert,condHorz);
 
 	}
 
