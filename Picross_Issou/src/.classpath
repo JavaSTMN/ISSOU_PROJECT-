@@ -3,9 +3,13 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path=""/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="D:/Git/ISSOU/ISSOU_PROJECT-/Picross_Issou/src/json-simple-1.1.1.jar"/>
 =======
 	<classpathentry kind="lib" path="C:/Users/dylan/Google Drive/CNAM/JAVA - Cosal/ISSOU_PROJECT-/Picross_Issou/lib/json-simple-1.1.1.jar"/>
 >>>>>>> origin/dylan
+=======
+	<classpathentry exported="true" kind="lib" path="D:/Git/ISSOU/ISSOU_PROJECT-/Picross_Issou/lib/json-simple-1.1.1.jar"/>
+>>>>>>> origin/master
 	<classpathentry kind="output" path=""/>
 </classpath>
