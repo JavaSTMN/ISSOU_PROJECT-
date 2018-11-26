@@ -22,7 +22,7 @@ public class LayoutFactory {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, ParseException  {
 
-		Layout layoutPanel = create("src/exemple.json");
+		Layout layoutPanel = create("exemple.json");
 		JPanel panel = layoutPanel.getPanel();
 		frame = new JFrame("Picross");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -23,7 +23,7 @@ public class TestChooseFile {
 	static JFrame frame;
 
 	
-	public static void main(String[] args) throws FileNotFoundException, IOException, ParseException  {
+	public static void main(String[] args) throws FileNotFoundException, IOException  {
 
 		
 		JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());

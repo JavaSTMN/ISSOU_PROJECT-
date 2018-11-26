@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path=""/>
+	<classpathentry kind="lib" path="C:/Users/dylan/Google Drive/CNAM/JAVA - Cosal/ISSOU_PROJECT-/Picross_Issou/lib/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
