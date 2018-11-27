@@ -78,19 +78,20 @@ public class Layout implements IObserver  {
 	public void update(IObservable observable) {
 		Box b = (Box) observable;
 		b.getColum();
-		verifLine(b.getLine());
-		//verifCol(b.getColum());
+		//verifLine(b.getLine());
+		verifCol(b.getColum());
 		
 	}
 
 	private boolean verifLine(int line) {
-		System.out.println(ListCondHorz[line].getCond());
-		int result = 0;
+		//System.out.println(ListCondHorz[line].getCond());
+		int result = 1;
 		ArrayList<Integer> tabTemp = new ArrayList<Integer>();
 		for (int i = 0 ; i<this.nbLine-1; i++) {
 			if(this.matrice[line][i].getStatus() == true) {
-				for (int j = i; j<this.nbColum-i-1; j++) {
-					if(this.matrice[line][j+1].getStatus() == true) {
+				for (int j = i+1; j<this.nbColum; j++) {
+					if(this.matrice[line][j].getStatus() == true && this.matrice[line][j-1].getStatus() == true) {
+						i = j;
 						result ++;
 					}
 				}
@@ -98,12 +99,40 @@ public class Layout implements IObserver  {
 			}
 			
 		}
-		System.out.println(tabTemp);
+		if(ListCondHorz[line].getCond().equals(tabTemp)) {
+			System.out.println("ligne est validée");
+		}
+		if(!ListCondHorz[line].getCond().equals(tabTemp)) {
+			System.out.println("T TRO NUL");
+		}
+		
 		return true;
 	}
 
 	private boolean verifCol(int Col) {
 		System.out.println(ListCondHorz[Col].getCond());
+		int result2 = 1;
+		ArrayList<Integer> tabTemp = new ArrayList<Integer>();
+		for (int i = 0 ; i<this.nbLine-1; i++) {
+			if(this.matrice[i][Col].getStatus() == true) {
+				for (int j = i+1; j<this.nbColum; j++) {
+					if(this.matrice[j][Col].getStatus() == true && this.matrice[j-1][Col].getStatus() == true) {
+						i = j;
+						result2 ++;
+					}
+				}
+				tabTemp.add(result2);
+			}
+			
+		}
+		if(ListCondHorz[line].getCond().equals(tabTemp)) {
+			System.out.println("ligne est validée");
+		}
+		if(!ListCondHorz[line].getCond().equals(tabTemp)) {
+			System.out.println("T TRO NUL");
+		}
+		
+		return true;
 		return true;
 	}
 
