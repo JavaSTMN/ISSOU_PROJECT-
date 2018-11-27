@@ -1,17 +1,11 @@
-import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Arrays;
 import javax.swing.*;
-import java.awt.Color;
-import java.awt.Component;
 
 public class Layout implements IObserver  {
 
-	private JPanel panel, panel2, panel3;
+	private JPanel panel;
 	public ArrayList<ArrayList<Integer>> listCond;
 	public int nbLine;
 	public int nbColum;

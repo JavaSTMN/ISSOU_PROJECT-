@@ -18,9 +18,10 @@ public class LayoutFactory {
 	static ArrayList<ArrayList<Integer>> tabVerifCol;
 	static JFrame frame;
 
-	public static void main(String[] args) throws FileNotFoundException, IOException, ParseException  {
+	public static void main(String args) throws FileNotFoundException, IOException, ParseException  {
 
-		Layout layoutPanel = create("src/exemple.json");
+		//Layout layoutPanel = create("src/exemple.json");
+		Layout layoutPanel = create(args);
 		JPanel panel = layoutPanel.getPanel();
 		frame = new JFrame("Picross");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
