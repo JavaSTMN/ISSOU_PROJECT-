@@ -88,7 +88,7 @@ public class LayoutFactory implements IObserver2 {
 		getEcranVictoire(frame);
 	}
 	
-	public static void getEcranVictoire(JFrame f) {
+	public void getEcranVictoire(JFrame f) {
 		final JPanel glass = (JPanel) f.getGlassPane();
 		System.out.println(glass);
 		glass.setVisible(true);
