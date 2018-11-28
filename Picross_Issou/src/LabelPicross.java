@@ -48,13 +48,11 @@ public class LabelPicross {
 	public JPanel getPanelLabel() {
 		return this.panel;
 	}
-
-	private void setColor(Color color) {
-		this.color = color;
-		this.panel.setBackground(this.color);
-		this.panel.setForeground(this.color);
-	}
 	
+	public void setBackgroundTrue(Color colortoset) {
+		this.panel.setBackground(colortoset);
+	}
+
 	public ArrayList<Integer> getCond() {
 		return this.spec;
 	}

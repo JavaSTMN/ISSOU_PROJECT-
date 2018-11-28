@@ -52,7 +52,7 @@ public class Box implements ActionListener, IObservable {
 	public int getColum() {
 		return this.colum;
 	}
-
+		
 	public boolean getStatus() {
 		if (this.color.equals(Color.BLACK)) {
 			return Boolean.TRUE;
@@ -79,11 +79,11 @@ public class Box implements ActionListener, IObservable {
 		notifyObservable();
 	}
 
-	private void setSizeBox() {
+	public void setSizeBox() {
 		this.button.setPreferredSize(new Dimension(this.height, this.width));
 	}
 
-	private void setColor(Color Color) {
+	public void setColor(Color Color) {
 		this.color = Color;
 		this.button.setForeground(this.color);
 		this.button.setBackground(this.color);
