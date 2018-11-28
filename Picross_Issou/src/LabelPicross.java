@@ -1,6 +1,9 @@
 import java.awt.Color;
+import java.awt.Component;
 import java.util.ArrayList;
+
 import javax.swing.BoxLayout;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 

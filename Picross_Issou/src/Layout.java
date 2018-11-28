@@ -1,11 +1,18 @@
+import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Arrays;
+
 import javax.swing.*;
+import java.awt.Color;
+import java.awt.Component;
 
 public class Layout implements IObserver {
 
-	private JPanel panel;
+	private JPanel panel, panel2, panel3;
 	public ArrayList<ArrayList<Integer>> listCond;
 	public int nbLine;
 	public int nbColum;
@@ -88,15 +95,6 @@ public class Layout implements IObserver {
 		System.out.println(ListCondHorz[line].getCond());
 		int result = 1;
 		ArrayList<Integer> tabTemp = new ArrayList<Integer>();
-<<<<<<< HEAD
-		for (int i = 0 ; i<this.nbLine-1; i++) {
-			if(this.matrice[line][i].getStatus() == true) {
-				result = 1;
-				for (int j = i; j<this.nbColum-i-1; j++) {
-						if(this.matrice[line][j+1].getStatus() == true) {
-							result ++;
-						}
-=======
 		for (int i = 0; i < this.nbLine; i++) {
 			if (this.matrice[line][i].getStatus() == true) {
 				for (int j = i + 1; j < this.nbColum; j++) {
@@ -107,13 +105,10 @@ public class Layout implements IObserver {
 					else {
 						break;
 					}
->>>>>>> pierre
 				}
 				tabTemp.add(result);
 				result = 1;
 			}
-<<<<<<< HEAD
-=======
 		}
 		if (ListCondHorz[line].getCond().equals(tabTemp)) {
 			System.out.println("ligne est validée");
@@ -126,7 +121,6 @@ public class Layout implements IObserver {
 		}
 		if (isWin(this.resultLine, this.resultCol) == true) {
 			System.out.println("Victoire");
->>>>>>> pierre
 		}
 		System.out.println(tabTemp);
 		return true;
