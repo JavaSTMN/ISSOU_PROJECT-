@@ -48,7 +48,8 @@ public class TestChooseFile {
 				File file = jfc.getSelectedFile();
 
 				try {
-					LayoutFactory.main(file.getName());
+					//LayoutFactory.main(file.getName());
+					LayoutFactory layout = new LayoutFactory(file.getAbsolutePath());
 					f.dispose();
 				} catch (IOException | ParseException e1) {
 					// TODO Auto-generated catch block
