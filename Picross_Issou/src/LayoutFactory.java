@@ -82,7 +82,7 @@ public class LayoutFactory implements IObserver2 {
 		return new Layout(tabVerifRow, tabVerifCol);
 	}
 	
-	public void updateWin(IObservable2 observable) {
+	public void updateWin(IObservable2 obseervable) {
 		// frame victory 
 		//Layout L = (Layout) observable;
 		getEcranVictoire(frame);
@@ -93,7 +93,7 @@ public class LayoutFactory implements IObserver2 {
 		System.out.println(glass);
 		glass.setVisible(true);
 		glass.setLayout(new GridBagLayout());
-		JLabel victoire = new JLabel("Victoire ISSOOOOUU ! un 20 svp ?");
+		JLabel victoire = new JLabel("Victoire !");
 		Color color = new Color(0, 255, 0);
 		victoire.setForeground(color);
 		victoire.setFont(new Font("Roboto", Font.PLAIN, 38));

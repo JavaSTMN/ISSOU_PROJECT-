@@ -84,9 +84,9 @@ public class Layout implements IObserver,IObservable2 {
 		b.getColum();
 		verifLine(b.getLine());
 		verifCol(b.getColum());
-		if (isWin()) {
-			notifyObservable2();
-		}
+//		if (isWin()) {
+//			notifyObservable2();
+//		}
 	}
 
 	private void verifLine(int line) {
@@ -115,7 +115,6 @@ public class Layout implements IObserver,IObservable2 {
 			this.ListCondHorz[line].setBackgroundTrue(null);
 			this.resultLine[line] = false;
 		}
-		// System.out.println(tabTemp);
 	}
 
 	private void verifCol(int Col) {
